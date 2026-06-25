@@ -3,7 +3,7 @@ import streamlit as st
 import os
 from snowflake.snowpark.functions import col
 
-streamlit.title('My Parents New Healthy')
+st.title('My Parents New Healthy')
 
 cnx = st.connection("snowflake")
 session = cnx.session()
