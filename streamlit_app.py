@@ -3,7 +3,7 @@ import streamlit as st
 import os
 from snowflake.snowpark.functions import col
 import requests
-import pandas 
+import pandas as pd
 
 st.title('My Parents New Healthy')
 
@@ -41,7 +41,7 @@ if ingredients_list:
   
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen +' '
-
+        st.write(ingredients_string)
         search_on=pd_df.loc[pd_df['FRUIT_NAME'] == fruit_chosen, 'SEARCH_ON'].iloc[0]
         st.write(search_on)
       #######################################
